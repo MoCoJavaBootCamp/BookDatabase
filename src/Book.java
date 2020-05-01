@@ -5,6 +5,10 @@ public class Book {
     String description;
     String price;
 
+    // undefined instance
+    Book(){};
+
+    // instance requiring values
     Book (String sku, String title, String author, String description, String price) {
         this.sku = sku;
         this.title = title;
@@ -13,11 +17,14 @@ public class Book {
         this.price = price;
     }
 
-    public static String getBookInfo() {
+    public String getBookInfo() {
         return String.format("SKU: %s Title: %s Author: %s Description: %s Price: $%s",
                 sku, title, author, description, price);
     }
 
+    public boolean isSameSKU(String sku) {
+       return this.sku.equals(sku);
+    }
 
     public void setSku(String sku) {
         this.sku = sku;
