@@ -17,8 +17,8 @@ public class Book {
         this.price = price;
     }
 
-    public String getBookInfo() {
-        return String.format("SKU: %s Title: %s Author: %s Description: %s Price: $%s",
+    public void getBookInfo() {
+        System.out.printf("SKU: %s Title: %s Author: %s Description: %s Price: $%s\n",
                 sku, title, author, description, price);
     }
 
